@@ -1,4 +1,2 @@
 
-File Handling
-Concurrency
-Web Sraping
+File Handling & Concurrency & Web Sraping
