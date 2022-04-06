@@ -2,4 +2,3 @@
 File Handling
 Concurrency
 Web Sraping
-Object Oriented Programming

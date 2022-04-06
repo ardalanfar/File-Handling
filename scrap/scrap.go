@@ -13,11 +13,10 @@ type Scrap_fields struct {
 	Allowed_domain string
 }
 
+//Find all links to a website
 func (field Scrap_fields) Scrap_links() string {
 	var str string
-	c := colly.NewCollector(
-		colly.AllowedDomains(field.Allowed_domain),
-	)
+	c := colly.NewCollector(colly.AllowedDomains(field.Allowed_domain))
 
 	c.OnHTML(".mw-parser-output", func(e *colly.HTMLElement) {
 		links := e.ChildAttrs("a", "href")

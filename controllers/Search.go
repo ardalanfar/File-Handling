@@ -1,4 +1,4 @@
-package file
+package controllers
 
 import (
 	"strings"
@@ -14,6 +14,7 @@ type Search_fields struct {
 	Word_search string
 }
 
+//Find a word in text file
 func (field Search_fields) Search_word_txtfile(cha chan int, wg *sync.WaitGroup) {
 	result_search := strings.Count(string(field.Databyt), field.Word_search)
 	cha <- result_search

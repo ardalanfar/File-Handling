@@ -1,4 +1,4 @@
-module Edit_File
+module File-Handling
 
 go 1.17
 

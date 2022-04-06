@@ -1,4 +1,4 @@
-package file
+package controllers
 
 import (
 	"strings"
@@ -13,12 +13,13 @@ type Counting_fields struct {
 	Databyt []byte
 }
 
+//Count number of lines text file
 func (field Counting_fields) Number_lines_textfile(cha chan int, wg *sync.WaitGroup) {
-	var sum int
+	var sumline int
 	lines := strings.Split(string(field.Databyt), "\n")
-	for sum = range lines {
-		sum = sum + 1
+	for sumline = range lines {
+		sumline = sumline + 1
 	}
-	cha <- sum
+	cha <- sumline
 	wg.Done()
 }

@@ -6,6 +6,7 @@ type Config struct {
 	Allowed_domain    string
 }
 
+//Set configs
 func GetConfig() *Config {
 	return &Config{
 		Address_text_file: "docs/text",
